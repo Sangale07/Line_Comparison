@@ -32,11 +32,15 @@ public class LineLength {
         System.out.println("The length of the first line is: " + distance1);
         System.out.println("The length of the second line is: " + distance2);
 
-        if (distance1 == distance2) {
-            System.out.println("Both lines are of equal length.");
+        int comparisonResult = Double.compare(distance1, distance2);
+        if (comparisonResult > 0) {
+            System.out.println("First Line is large");
+        } else if (comparisonResult < 0) {
+            System.out.println("First Line is short");
         } else {
-            System.out.println("The lines are of different lengths.");
+            System.out.println("Equal length");
         }
+
 
         sc.close();
 
